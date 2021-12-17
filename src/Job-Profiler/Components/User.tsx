@@ -7,25 +7,17 @@ export const User = (props: any) => {
   const selectlist: any = []
   const rejectList: any = []
 
-  
-
   const OnSelecting = () => {
     let getShortListed: any = localStorage.getItem("Shortlisted")
     if (getShortListed) {
       selectlist.push(...JSON.parse(getShortListed))
     }
-    
     selectlist.push(user)
     JSON.stringify(selectlist)
-    
-    
     localStorage.setItem("Shortlisted", JSON.stringify(selectlist))
-    
   };
 
-  // get array from localstorage
-  // parse the array
-  // push the new item 
+  
 // STEP 1: Create new Empty array.
 // STEP 2: Get shortlisted/rejected list if available else skip this.
 // STEP 3: Parse shortlisted/rejected list.

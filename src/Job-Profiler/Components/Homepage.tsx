@@ -11,22 +11,21 @@ const Homepage = () => {
       const response = await GetRequest(
         "https://s3-ap-southeast-1.amazonaws.com/he-public-data/users49b8675.json"
       );
-      
+
       let userData = [...response];
-      
+
       setUsers(userData);
-      
     };
 
     fetchUsers();
   }, []);
-  // console.log(users);
+
   const OnReset = () => {
-    localStorage.clear()
-  }
+    localStorage.clear();
+  };
+
   return (
     <div style={{ maxWidth: "63%", margin: "0 auto", textAlign: "center" }}>
-
       <Link to="/shortlisted" state={{ name: "Shortlisted" }}>
         <button>Shortlisted</button>
       </Link>

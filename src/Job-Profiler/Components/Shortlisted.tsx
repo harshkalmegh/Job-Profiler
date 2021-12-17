@@ -1,6 +1,3 @@
-import React, { useEffect, useState } from "react";
-import { useLocation } from "react-router";
-
 function Shortlisted() {
   let selectGet: any = localStorage.getItem("Shortlisted");
   let parsedData = JSON.parse(selectGet);
